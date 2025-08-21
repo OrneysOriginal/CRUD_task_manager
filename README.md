@@ -28,11 +28,15 @@ source venv/bin/activate  # Linux/MacOS
 # или
 venv\Scripts\activate.bat  # Windows
 ```
-3.Установите зависимости
+3. Установите зависимости
 ```bash
 pip install -r requirements.txt
 ```
-4. Запустите приложение
+4. Запустите миграции
+```bash
+alembic upgrade head
+```
+5. Запустите приложение
 ```bash
 uvicorn src.main:app --reload
 ```
